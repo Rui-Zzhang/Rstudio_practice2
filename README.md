@@ -3,4 +3,4 @@
 
 Hello everyone
 
-This is my first time using Github, so far so good!
+First time creating a Github repo, so far so good!
