@@ -9,7 +9,6 @@ install.packages("lmerTest")
 library("Matrix")
 library("lme4")
 library("nlme")
-library("lmerTest")
 
 #Fit a first mixed model with lmer that have only individual identity as a random effect and only a population mean.
 M1 <- lmer(aggression ~ 1 + (1|ID), data = unicorns)
@@ -21,6 +20,9 @@ M2 <- lmer(aggression ~ opp_size + block + (1|ID), data = unicorns)
 summary(M2)
 
 #Load lmerTest and refit the model using the exact same code. Look at the summary again.
-
+library("lmerTest")
+M3 <- lmer(aggression ~ opp_size + block + (1|ID), data = unicorns)
+summary(M3)
+M2
 
 
